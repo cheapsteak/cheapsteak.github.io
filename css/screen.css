@@ -171,7 +171,7 @@ body {
 }
 
 /* line 38, ../sass/screen.sass */
-.ease-in-out, .site-header .social-icons a {
+.ease-in-out, .site-header .social-icons a, .avatar {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
@@ -257,29 +257,38 @@ body {
   width: 130px;
   height: 130px;
   border-radius: 50%;
+  -webkit-filter: grayscale(40%);
+  -moz-filter: grayscale(40%);
+  filter: grayscale(40%);
+}
+/* line 89, ../sass/screen.sass */
+.avatar:hover {
+  -webkit-filter: grayscale(22%);
+  -moz-filter: grayscale(22%);
+  filter: grayscale(22%);
 }
 
-/* line 89, ../sass/screen.sass */
+/* line 93, ../sass/screen.sass */
 .main article {
   font-size: 120%;
   margin: 0 1em;
 }
-/* line 92, ../sass/screen.sass */
+/* line 96, ../sass/screen.sass */
 .main article time {
   display: inline-block;
   margin-top: 0.5em;
   font-size: 0.85em;
   color: #aaaaaa;
 }
-/* line 97, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 .main article p {
   line-height: 1.5em;
 }
-/* line 99, ../sass/screen.sass */
+/* line 103, ../sass/screen.sass */
 .main article p a {
   color: #0a66db;
 }
-/* line 102, ../sass/screen.sass */
+/* line 106, ../sass/screen.sass */
 .main h1 {
   color: #333333;
   font-family: "proxima-nova", sans-serif;
@@ -288,32 +297,32 @@ body {
   text-align: left;
   line-height: 1.13em;
 }
-/* line 109, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 .main h1 a {
   color: #333333;
 }
-/* line 111, ../sass/screen.sass */
+/* line 115, ../sass/screen.sass */
 .main button {
   padding: 0.3em 0.7em;
 }
 
-/* line 114, ../sass/screen.sass */
+/* line 118, ../sass/screen.sass */
 .read-more {
   color: #0a66db;
 }
 
 /* Posts */
-/* line 121, ../sass/screen.sass */
+/* line 125, ../sass/screen.sass */
 #post pre {
   background-color: whitesmoke;
   padding: 0.8em;
   overflow: auto;
 }
-/* line 125, ../sass/screen.sass */
+/* line 129, ../sass/screen.sass */
 #post ul, #post ol {
   margin-left: 1.35em;
 }
-/* line 127, ../sass/screen.sass */
+/* line 131, ../sass/screen.sass */
 #post code {
   border: 1px solid #dddddd;
   font-size: 0.85em;
@@ -321,16 +330,16 @@ body {
   font-family: monospace;
   line-height: 1.4;
 }
-/* line 134, ../sass/screen.sass */
+/* line 138, ../sass/screen.sass */
 #post pre code {
   border: none;
 }
 
-/* line 137, ../sass/screen.sass */
+/* line 141, ../sass/screen.sass */
 #related {
   margin-top: 2em;
 }
-/* line 139, ../sass/screen.sass */
+/* line 143, ../sass/screen.sass */
 #related h2 {
   margin-bottom: 1em;
 }
