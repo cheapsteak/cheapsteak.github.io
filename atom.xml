@@ -4,7 +4,7 @@
  <title>Chang Wang</title>
  <link href="http://www.cheapsteak.net/atom.xml" rel="self"/>
  <link href="http://www.cheapsteak.net/"/>
- <updated>2013-09-17T22:00:19+08:00</updated>
+ <updated>2013-09-18T05:47:31+08:00</updated>
  <id>http://www.cheapsteak.net/</id>
  <author>
    <name>Chang Wang</name>
@@ -16,11 +16,11 @@
    <link href="http://www.cheapsteak.net/2013/09/13/responsive-template-swapping-with-backbone"/>
    <updated>2013-09-13T00:00:00+08:00</updated>
    <id>http://www.cheapsteak.net//2013/09/13/responsive-template-swapping-with-backbone</id>
-   <content type="html">&lt;p&gt;CSS media queries sometimes aren't quite enough to get a design &quot;just right&quot; for every screen-size, especially for web-apps where you might want to change the UI more drastically than the more content-centric blogs or product-pages.&lt;/p&gt;
+   <content type="html">&lt;p&gt;CSS media queries sometimes aren't quite enough to get a design &quot;just right&quot; for every screen-size, especially for web-apps where you might want to change the UI more drastically than more content-centric blogs or product-pages.&lt;/p&gt;
 
-&lt;p&gt;For single page applications using Backbone, here's an example using &lt;code&gt;window.matchMedia&lt;/code&gt; to swap which template to render depending on whether a given media query matches.&lt;/p&gt;
+&lt;p&gt;For Backbone applications, here's an example using &lt;code&gt;window.matchMedia&lt;/code&gt; to swap which template to render depending on whether a given media query matches.&lt;/p&gt;
 
-&lt;p&gt;&lt;button class=&quot;class-toggler&quot; data-target=&quot;#cp_embed_nBulI&quot; data-class=&quot;expanded&quot;&gt;toggle width&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button class=&quot;class-toggler hide-small&quot; data-target=&quot;#cp_embed_nBulI&quot; data-class=&quot;contracted&quot;&gt;Toggle width&lt;/button&gt;&lt;/p&gt;
 
 &lt;p data-height=&quot;350&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;nBulI&quot; data-user=&quot;cheapsteak&quot; data-default-tab=&quot;result&quot; class='codepen'&gt;See the Pen &lt;a href='http://codepen.io/cheapsteak/pen/nBulI'&gt;Responsive template swapping with Backbone&lt;/a&gt; by Chang Wang (&lt;a href='http://codepen.io/cheapsteak'&gt;@cheapsteak&lt;/a&gt;) on &lt;a href='http://codepen.io'&gt;CodePen&lt;/a&gt;&lt;/p&gt;
 
@@ -28,24 +28,29 @@
 &lt;script async src=&quot;http://codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;script&gt;window.jQuery || document.write('&lt;script src=&quot;/js/jquery.min.js&quot;&gt;\u003c\/script&gt;')&lt;/script&gt;
 &lt;script&gt;
-    $('.class-toggler').click(function () {
-        var target = $(this).data('target'),
-            className = $(this).data('class');
-        $(target)
-            .addClass('ease-in-out-back force-acceleration')
-            .toggleClass(className);
-        $(this).toggleClass('active');
+    window.deferreds = window.deferreds || [];
+    window.deferreds.push(function () {
+        $('.class-toggler').click(function () {
+            var target = $(this).data('target'),
+                className = $(this).data('class');
+            $(target)
+                .addClass('ease-in-out-back force-acceleration')
+                .toggleClass(className);
+            $(this).toggleClass('active');
+        });
     });
 &lt;/script&gt;
-&lt;!--more--&gt;&lt;/p&gt;
+
+
+&lt;!--more--&gt;
+
 
 &lt;p&gt;If you're not already familiar with &lt;code&gt;matchMedia&lt;/code&gt;, I would suggest taking a look at &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Testing_media_queries?redirectlocale=en-US&amp;amp;redirectslug=DOM%2FUsing_media_queries_from_code&quot;&gt;MDN's examples&lt;/a&gt; that do a great job of showing how it's used.&lt;/p&gt;
 
 &lt;p&gt;My initial iteration of the view was a bit less complex:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ResponsiveView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Backbone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ResponsiveView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Backbone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -69,7 +74,8 @@
         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;A MediaQueryList &lt;code&gt;mql&lt;/code&gt; and a MediaQueryListListener &lt;code&gt;mqlListener&lt;/code&gt; are created in the view's constructor. Whenever the test result from mql's query &lt;code&gt;breakpoint&lt;/code&gt; changes, mqlListener is called and sets the appropriate template for the view and calls &lt;code&gt;render&lt;/code&gt; to redraw everything. &lt;em&gt;(By the way, you can omit the check for &lt;code&gt;window.matchMedia&lt;/code&gt; if you already have it polyfilled for IE9 and below)&lt;/em&gt;&lt;/p&gt;
 
