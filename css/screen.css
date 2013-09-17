@@ -1,0 +1,184 @@
+/* line 17, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot");
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(data:application/font-woff;charset=utf-8;base64,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) format("woff"), url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/* line 19, ../sass/icon-fonts.scss */
+.icon-twitter, .icon-rss, .icon-github {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 29, ../sass/icon-fonts.scss */
+.icon-twitter:before {
+  content: "\e000";
+}
+
+/* line 32, ../sass/icon-fonts.scss */
+.icon-rss:before {
+  content: "\e001";
+}
+
+/* line 35, ../sass/icon-fonts.scss */
+.icon-github:before {
+  content: "\f09b";
+}
+
+/* line 5, ../sass/screen.sass */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 15, ../sass/screen.sass */
+.force-acceleration {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 17, ../sass/screen.sass */
+.ease-in-out-back {
+  -webkit-transition: all 450ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 450ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 450ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 450ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* line 19, ../sass/screen.sass */
+.expanded {
+  width: 126% !important;
+  margin-left: -13%;
+}
+
+/* Site */
+/* line 25, ../sass/screen.sass */
+.main {
+  font-size: 110%;
+  text-align: justify;
+  width: 40em;
+  margin: 3em auto 2em auto;
+  line-height: 1.5em;
+}
+
+/* Posts */
+/* line 35, ../sass/screen.sass */
+#post pre {
+  background-color: whitesmoke;
+  padding: 0.8em;
+}
+/* line 40, ../sass/screen.sass */
+#post ul, #post ol {
+  margin-left: 1.35em;
+}
+/* line 42, ../sass/screen.sass */
+#post code {
+  border: 1px solid #dddddd;
+  font-size: 85%;
+  padding: 0 0.2em;
+}
+/* line 46, ../sass/screen.sass */
+#post pre code {
+  border: none;
+}
+
+/* line 49, ../sass/screen.sass */
+#related {
+  margin-top: 2em;
+}
+/* line 51, ../sass/screen.sass */
+#related h2 {
+  margin-bottom: 1em;
+}
