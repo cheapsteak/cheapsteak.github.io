@@ -4,7 +4,7 @@
  <title>Chang Wang</title>
  <link href="http://www.cheapsteak.net/atom.xml" rel="self"/>
  <link href="http://www.cheapsteak.net/"/>
- <updated>2013-09-18T05:47:31+08:00</updated>
+ <updated>2013-09-18T06:32:31+08:00</updated>
  <id>http://www.cheapsteak.net/</id>
  <author>
    <name>Chang Wang</name>
@@ -13,9 +13,9 @@
  
  <entry>
    <title>Responsive template swapping with Backbone</title>
-   <link href="http://www.cheapsteak.net/2013/09/13/responsive-template-swapping-with-backbone"/>
+   <link href="http://www.cheapsteak.net/posts/responsive-template-swapping-with-backbone"/>
    <updated>2013-09-13T00:00:00+08:00</updated>
-   <id>http://www.cheapsteak.net//2013/09/13/responsive-template-swapping-with-backbone</id>
+   <id>http://www.cheapsteak.net//posts/responsive-template-swapping-with-backbone</id>
    <content type="html">&lt;p&gt;CSS media queries sometimes aren't quite enough to get a design &quot;just right&quot; for every screen-size, especially for web-apps where you might want to change the UI more drastically than more content-centric blogs or product-pages.&lt;/p&gt;
 
 &lt;p&gt;For Backbone applications, here's an example using &lt;code&gt;window.matchMedia&lt;/code&gt; to swap which template to render depending on whether a given media query matches.&lt;/p&gt;
