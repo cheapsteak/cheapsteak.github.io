@@ -4,7 +4,7 @@
  <title>Chang Wang</title>
  <link href="http://www.cheapsteak.net/atom.xml" rel="self"/>
  <link href="http://www.cheapsteak.net/"/>
- <updated>2013-09-18T17:02:10+08:00</updated>
+ <updated>2013-09-19T00:18:21+08:00</updated>
  <id>http://www.cheapsteak.net/</id>
  <author>
    <name>Chang Wang</name>
@@ -35,7 +35,7 @@
             var target = $(this).data('target'),
                 className = $(this).data('class');
             $(target)
-                .addClass('ease-in-out-back force-acceleration centered')
+                .addClass('ease-in-out-back force-acceleration')
                 .toggleClass(className);
             $(this).toggleClass('active');
         });
