@@ -4,7 +4,7 @@
  <title>Chang Wang</title>
  <link href="http://www.cheapsteak.net/atom.xml" rel="self"/>
  <link href="http://www.cheapsteak.net/"/>
- <updated>2013-09-18T06:44:41+08:00</updated>
+ <updated>2013-09-18T17:02:10+08:00</updated>
  <id>http://www.cheapsteak.net/</id>
  <author>
    <name>Chang Wang</name>
@@ -20,7 +20,7 @@
 
 &lt;p&gt;For Backbone applications, here's an example using &lt;code&gt;window.matchMedia&lt;/code&gt; to swap which template to render depending on whether a given media query matches.&lt;/p&gt;
 
-&lt;p&gt;&lt;button class=&quot;class-toggler hide-small&quot; data-target=&quot;#cp_embed_nBulI&quot; data-class=&quot;contracted&quot;&gt;Toggle width&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button class=&quot;class-toggler hide-mid&quot; data-target=&quot;#cp_embed_nBulI&quot; data-class=&quot;contracted&quot;&gt;Toggle width&lt;/button&gt;&lt;/p&gt;
 
 &lt;p data-height=&quot;350&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;nBulI&quot; data-user=&quot;cheapsteak&quot; data-default-tab=&quot;result&quot; class='codepen'&gt;See the Pen &lt;a href='http://codepen.io/cheapsteak/pen/nBulI'&gt;Responsive template swapping with Backbone&lt;/a&gt; by Chang Wang (&lt;a href='http://codepen.io/cheapsteak'&gt;@cheapsteak&lt;/a&gt;) on &lt;a href='http://codepen.io'&gt;CodePen&lt;/a&gt;&lt;/p&gt;
 
@@ -35,7 +35,7 @@
             var target = $(this).data('target'),
                 className = $(this).data('class');
             $(target)
-                .addClass('ease-in-out-back force-acceleration')
+                .addClass('ease-in-out-back force-acceleration centered')
                 .toggleClass(className);
             $(this).toggleClass('active');
         });

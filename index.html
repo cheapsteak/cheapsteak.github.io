@@ -48,7 +48,7 @@
 
 <p>For Backbone applications, here's an example using <code>window.matchMedia</code> to swap which template to render depending on whether a given media query matches.</p>
 
-<p><button class="class-toggler hide-small" data-target="#cp_embed_nBulI" data-class="contracted">Toggle width</button></p>
+<p><button class="class-toggler hide-mid" data-target="#cp_embed_nBulI" data-class="contracted">Toggle width</button></p>
 
 <p data-height="350" data-theme-id="0" data-slug-hash="nBulI" data-user="cheapsteak" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/cheapsteak/pen/nBulI'>Responsive template swapping with Backbone</a> by Chang Wang (<a href='http://codepen.io/cheapsteak'>@cheapsteak</a>) on <a href='http://codepen.io'>CodePen</a></p>
 
@@ -63,7 +63,7 @@
             var target = $(this).data('target'),
                 className = $(this).data('class');
             $(target)
-                .addClass('ease-in-out-back force-acceleration')
+                .addClass('ease-in-out-back force-acceleration centered')
                 .toggleClass(className);
             $(this).toggleClass('active');
         });
