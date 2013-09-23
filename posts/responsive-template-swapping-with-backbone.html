@@ -45,7 +45,7 @@
 
 <p>For Backbone applications, here's an example using <code>window.matchMedia</code> to swap which template to render depending on whether a given media query matches.</p>
 
-<p><button class="class-toggler hide-mid" data-target="#cp_embed_nBulI" data-class="contracted">Toggle width</button></p>
+<p><button id="backbone-toggler" class="hide-mid" data-target="#cp_embed_nBulI" data-class="contracted">Toggle width</button></p>
 
 <p data-height="350" data-theme-id="0" data-slug-hash="nBulI" data-user="cheapsteak" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/cheapsteak/pen/nBulI'>Responsive template swapping with Backbone</a> by Chang Wang (<a href='http://codepen.io/cheapsteak'>@cheapsteak</a>) on <a href='http://codepen.io'>CodePen</a></p>
 
@@ -56,13 +56,10 @@
 <script>
     window.deferreds = window.deferreds || [];
     window.deferreds.push(function () {
-        $('.class-toggler').click(function () {
-            var target = $(this).data('target'),
-                className = $(this).data('class');
-            $(target)
+        $('#backbone-toggler').click(function () {
+            $('#cp_embed_nBulI')
                 .addClass('ease-in-out-back force-acceleration')
-                .toggleClass(className);
-            $(this).toggleClass('active');
+                .toggleClass('contracted');
         });
     });
 </script>
@@ -111,7 +108,6 @@
 <p>I'm still getting into <a href="http://jekyllrb.com/">Jekyll</a> and haven't implemented commenting yet. If you have an improvement or see any pitfalls with this method, please shoot me a <a href="http://twitter.com/cheapsteak">tweet</a>.</p>
 
 </article>
-
 
     </section>
   </div>
